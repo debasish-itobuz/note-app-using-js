@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotesApp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="width-90">
+      <i class="fa-solid fa-bars"></i>
+      <p>All Notes</p>
+    </nav>
+    <div class="width-90 search-bar-div">
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input placeholder="Search notes" />
+      </div>
+      <div class="add-button" onclick="createNote()">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <!-- Overlay Div Start-->
+    <div id="createNote" class="create-note">
+      <i onclick="closeCreateNote()" class="fa-solid fa-rectangle-xmark"></i>
+      <p>Title</p>
+      <input id="title" placeholder="Title..." />
+      <p>Description</p>
+      <textarea id="description" placeholder="Description..."></textarea>
+      <button onclick="saveNote()">Save</button>
+    </div>
+    <!-- Overlay Div Ends-->
+    <div id="noteList" class="note-list">
+      <!-- <div class="note">
+        <h5>12/12/12</h5>
+        <h3>Title</h3>
+        <p>description</p>
+        <i class="fa-solid fa-trash"></i>
+      </div> -->
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
